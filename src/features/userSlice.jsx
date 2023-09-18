@@ -100,15 +100,16 @@ export const userSlice = createSlice({
     },
     extraReducers: {
         [currecyConverter.fulfilled]: (state, action) => {
+            // console.log(action.payload)
             // console.log(action.payload.rates.USD)
             // const getUSD = action.payload.rates.USD
             // console.log(getUSD, "USD")
             // state.totalAmount = getUSD
-            // if(state.totalAmount >0){
+            if(action.payload >0){
 
                 state.totalAmount =  (Number(state.totalAmount) + Number(action.payload)).toFixed(2) 
                 console.log(state.totalAmount)
-            // }
+            }
 
         },
     }
