@@ -104,11 +104,11 @@ export const userSlice = createSlice({
             // const getUSD = action.payload.rates.USD
             // console.log(getUSD, "USD")
             // state.totalAmount = getUSD
-            if(state.deposite >0){
+            // if(state.totalAmount >0){
 
-                state.totalAmount =  Number(state.totalAmount) + Number(action.payload) 
+                state.totalAmount =  (Number(state.totalAmount) + Number(action.payload)).toFixed(2) 
                 console.log(state.totalAmount)
-            }
+            // }
 
         },
     }
